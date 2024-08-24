@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 0
+    path: Assets/Scenes/Opening Cutscene.unity
+    guid: 5c03c5fad45b3914c95d2fa6cae93045
+  - enabled: 1
+    path: Assets/Scenes/Test Game Scene.unity
+    guid: 05d6f289000d1a449828fb2205c8f6cc
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/South Region/Home.unity
+    guid: 8d9ec57f90d998e46ac327a968a0092e
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/East Region/East Forest.unity
+    guid: 96ec8dc868e75ca4ca3520490c1667f6
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/East Region/River.unity
+    guid: c18dce7c0e942c848ad2bc889f4aa2e7
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/East Region/River Village.unity
+    guid: 0469baae8f5188d45853edca6d290715
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/North Region/Cloud Village.unity
+    guid: b07117942aef29d4aacd56294a098a86
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/North Region/Iceberg Mountains.unity
+    guid: f545d250c0963824ead25735db9db623
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/North Region/North Forest.unity
+    guid: 940cdc2d5effd8544be140318f1bfb25
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/East Region/Silver Moon Lake.unity
+    guid: c180dc624c626124b8817176e56a1b4a
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/North Region/Witch's Mansion.unity
+    guid: a626255fe0921fe41a89b1fe690643e8
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/North Region/Witch's Patio.unity
+    guid: 6956ccb0981f6ae4386b36a9d7e58389
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/West Region/Rocky Village.unity
+    guid: 4c9cbd98edb88784989d5d3643de0a93
+  - enabled: 1
+    path: Assets/Scenes/Location Scenes/West Region/Rosie the Bear's cave.unity
+    guid: 9c2be5286a0528848b8334615598394c
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 8485c191ce0acd6428bb0388984b6aac, type: 2}
