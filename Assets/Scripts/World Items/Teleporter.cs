@@ -32,6 +32,13 @@ public class Teleporter : MonoBehaviour
 
 		if (GetComponent<BoxCollider2D>().IsTouching(PlayerCollider))
 		{
+			int a = 1;
+			int b = 7;
+			Debug.Log("A: " + a + " | B: " + b);
+			a = a ^ b;
+			b = a ^ b;
+			a = a ^ b;
+			Debug.Log("A: " + a + " | B: " + b);
 			SceneManager.LoadScene((int) SceneIndex);
 		}
     }

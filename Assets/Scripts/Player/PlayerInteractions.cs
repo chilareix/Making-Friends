@@ -39,12 +39,14 @@ public class PlayerInteractions : MonoBehaviour
 	public static int PlayerMaxMana = 10;
 	public static int CurrentPlayerMana = 10;
 	private TMP_Text[] TMPArray;
+	private Slider[] SliderArray;
 	private TMP_Text HealthText;
-	public Slider HealthSlider;
+	private Slider HealthSlider;
 	private TMP_Text StaminaText;
-	public Slider StaminaSlider;
+	private Slider StaminaSlider;
 	private TMP_Text ManaText;
-	public Slider ManaSlider;
+	private Slider ManaSlider;
+	private PlayerAnimation AnimationScript;
 
 	void Awake()
 	{
@@ -57,14 +59,22 @@ public class PlayerInteractions : MonoBehaviour
 	}
 	void Start()
     {
+		AnimationScript = GetComponent<PlayerAnimation>();
+		SliderArray = Slider.FindObjectsByType<Slider>(FindObjectsSortMode.None);
 		TMPArray = TMP_Text.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None);
-		for(int i = 0; i < TMPArray.Length; i++)
+		for (int i = 0; i < TMPArray.Length; i++)
 		{
 			if (TMPArray[i].name == "HP Text") HealthText = TMPArray[i];
 			if (TMPArray[i].name == "Stamina Text") StaminaText = TMPArray[i];
 			if (TMPArray[i].name == "Mana Text") ManaText = TMPArray[i];
 		}
-    }
+		for (int i = 0; i < SliderArray.Length; i++)
+		{
+			if (SliderArray[i].name == "HP") HealthSlider = SliderArray[i];
+			if (SliderArray[i].name == "Stamina") StaminaSlider= SliderArray[i];
+			if (SliderArray[i].name == "Mana") ManaSlider= SliderArray[i];
+		}
+	}
 
     // Update is called once per frame
     void Update()
@@ -106,9 +116,11 @@ public class PlayerInteractions : MonoBehaviour
 	{
 		while (Attacking)
 		{
-			yield return new WaitForSeconds(0.3f);
-			Attack(_Weapon);
+			yield return new WaitForSeconds(0.13f);
+			//Attack(_Weapon);
+			AnimationScript.Throwing = true;
 		}
+		AnimationScript.Throwing = false;
 	}
 
 	void Attack(Weapon weapon)

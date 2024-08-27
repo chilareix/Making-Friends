@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 	private float HorizontalFloat;
 
 	private PlayerAnimation AnimationScript;
+	private Transform PlayerTransform;
 
 
 	void Awake()
@@ -61,8 +62,6 @@ public class PlayerMovement : MonoBehaviour
 
 		Controls = new();
 
-		AnimationScript = GetComponent<PlayerAnimation>();
-
 		Controls.ControllerInputs.Horizontal.performed += context => HorizontalFloat = context.ReadValue<float>();
 		Controls.ControllerInputs.Horizontal.canceled += context => HorizontalFloat = 0f;
 
@@ -78,7 +77,9 @@ public class PlayerMovement : MonoBehaviour
 
 	// Start is called before the first frame update
 	void Start()
-    {
+	{
+		PlayerTransform = GetComponent<Transform>();
+		AnimationScript = GetComponent<PlayerAnimation>();
 		MoveSpeedTimesFifty = MoveSpeedAmplifier * 50;
 		PlayerJumpAmpTimesFifty = PlayerJumpAmplifier * 50;
 		PlayerMaxSpeed = PlayerWalkSpeed;
@@ -136,6 +137,11 @@ public class PlayerMovement : MonoBehaviour
 		//Moves the player horizontally based on input
 	public void MoveHorizontally(float horizontalValue)
 	{
+		float xScale = PlayerTransform.localScale.x;
+		PlayerTransform.localScale = new Vector3(PlayerRigidBody.linearVelocityX < 0?
+			Mathf.MoveTowards(xScale, -1, 0.066f) : 
+			Mathf.MoveTowards(xScale,  1, 0.066f),
+			1, 1);
 		AnimationScript.HorizontalVelocity = HorizontalAnimationVelocity();
 		//Allows for horizontal movement
 		if (Math.Abs(PlayerRigidBody.linearVelocity.x) <= PlayerMaxSpeed)
@@ -147,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
 	private float HorizontalAnimationVelocity()
 	{
 		float playerVelocity = Mathf.Abs(PlayerRigidBody.linearVelocityX);
-		if (playerVelocity > PlayerWalkSpeed) return (1 / (PlayerRunSpeed - PlayerWalkSpeed)) * (playerVelocity - PlayerWalkSpeed);
+		if (playerVelocity > PlayerWalkSpeed * 0.75f) return (1 / (PlayerRunSpeed - PlayerWalkSpeed)) * Mathf.Abs(playerVelocity - PlayerWalkSpeed) + 0.01f;
 		return 0;
 	}
 
