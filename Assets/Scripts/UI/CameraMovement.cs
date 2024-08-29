@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -29,8 +30,10 @@ public class CameraMovement : MonoBehaviour
 	//Tests for the position of the camera relative to the player to see if it is close enough to stop or far enough to go
 	public bool CameraReachTest()
 	{
-		if (Vector2.Distance(transform.position, Player.position) >= maxDistance) return false;
-		if (Vector2.Distance(transform.position, Player.position) <= minDistance) return true;
+		float distance = Vector2.Distance(transform.position, Player.position);
+
+		if ( distance >= maxDistance) return false;
+		if ( distance <= minDistance) return true;
 		return false;
 	}
 

@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
 	public float EnemyMaxHealth = 1;
 	public Slider HealthBar;
 	// Start is called before the first frame update
-	void Start()
+	protected void BStart()
 	{
 		HealthBar.maxValue = EnemyMaxHealth;
 		HealthBar.value = CurrentHealth;
@@ -17,11 +17,11 @@ public class EnemyHealth : MonoBehaviour
 	}
 
     // Update is called once per frame
-    void Update()
+    protected void BUpdate()
     {
 		HealthBar.value = CurrentHealth;
 	}
-	void TakeDamage(float DamageToTake)
+	protected void TakeDamage(float DamageToTake)
 	{
 		CurrentHealth = Mathf.Clamp(CurrentHealth - DamageToTake, 0, EnemyMaxHealth);
 	}

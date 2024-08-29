@@ -47,13 +47,20 @@ public class PlayerInteractions : MonoBehaviour
 	private TMP_Text ManaText;
 	private Slider ManaSlider;
 	private PlayerAnimation AnimationScript;
+	private InventoryScript Inventory;
 
 	void Awake()
 	{
 		_Cursor = _CursorObject.GetComponent<CursorScript>();
-
+		Inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<InventoryScript>();
 		Controls = new();
 
+		Controls.ControllerInputs.InventorySelect.performed += context => Inventory.SelectedItemIndex = Mathf.Clamp(Inventory.SelectedItemIndex + context.ReadValue<int>(), 0, 4);
+		Controls.ControllerInputs.InventorySelect.canceled += context => Inventory.SelectedItemIndex += 0;
+
+		Controls.ControllerInputs.InventoryToggle.performed += context => Inventory.ToggleInventory();
+
+		Controls.ControllerInputs.Enable();
 		Controls.ControllerInputs.Attack.performed += context => Attacking = true;
 		Controls.ControllerInputs.Attack.canceled += context => Attacking = false;
 	}
@@ -127,7 +134,7 @@ public class PlayerInteractions : MonoBehaviour
 	{
 		Vector2 playerPos = PlayerRigidBody.position;
 		Vector2 cursorPos = _Cursor.GetCursorLocationToWorld();
-		_Weapon.Fire(playerPos, Mathf.Atan( (cursorPos.y - playerPos.y) / (cursorPos.x - playerPos.x) ));
+		weapon.Fire(playerPos, Mathf.Atan( (cursorPos.y - playerPos.y) / (cursorPos.x - playerPos.x) ));
 	}
 
 	public void OnEnable()

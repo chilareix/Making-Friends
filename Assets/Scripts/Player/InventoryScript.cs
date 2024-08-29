@@ -7,48 +7,35 @@ using UnityEngine.UI;
 public class InventoryScript : MonoBehaviour
 {
 	private PlayerControls Controls;
-	public InventoryItem[] Inventory = new InventoryItem[34];
-	public SpriteRenderer[] SpriteRenderers = new SpriteRenderer[34];
+	public InventoryItem[] Inventory = new InventoryItem[40];
+	public SpriteRenderer[] SpriteRenderers = new SpriteRenderer[40];
 	public GameObject SelectedItemGameObject;
 	public int SelectedItemIndex = 0;
 	private bool IsInventoryOpen = false;
+	private Image InventoryImage;
 
 	public void Awake()
 	{
-		Controls = new();
-		Controls.ControllerInputs.InventorySelect.performed += context => SelectedItemIndex = Mathf.Clamp(SelectedItemIndex + context.ReadValue<int>(), 0, 4);
-		Controls.ControllerInputs.InventorySelect.canceled += context => SelectedItemIndex += 0;
 	}
 	// Start is called before the first frame update
 	void Start()
-    {
-
-    }
+	{
+		InventoryImage = GetComponent<Image>();
+		InventoryImage.enabled = false;
+	}
 
     // Update is called once per frame
     void FixedUpdate()
     {
-		if(IsInventoryOpen) DisplayInventory();
-		DisplayHotbar();
 	}
-	void DisplayInventory()
+	public void ToggleInventory()
 	{
+		IsInventoryOpen = !IsInventoryOpen;
 		if (IsInventoryOpen)
 		{
-
+			InventoryImage.enabled = true;
+			return;
 		}
-	}
-	void DisplayHotbar()
-	{
-
-	}
-
-	public void OnEnable()
-	{
-		Controls.ControllerInputs.Enable();
-	}
-	public void OnDisable()
-	{
-		Controls.ControllerInputs.Disable();
+		InventoryImage.enabled = false;
 	}
 }

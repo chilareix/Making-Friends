@@ -17,7 +17,7 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		float yeet = Throwing? 0.5f : 0;
+		float yeet = Throwing? 1 : 0;
 		PlayerAnimator.SetFloat("Running Throw Blend", yeet);
 		PlayerAnimator.SetBool("Grounded", Grounded);
 		PlayerAnimator.SetFloat("Vertical Velocity", VerticalVelocity);

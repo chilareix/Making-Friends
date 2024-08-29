@@ -90,6 +90,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Crouch"",
+                    ""type"": ""Button"",
+                    ""id"": ""2e9a4ff7-d765-476c-b55d-2725ba76959b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InventoryToggle"",
+                    ""type"": ""Button"",
+                    ""id"": ""4c11a0b7-e021-4dad-8ca6-45fcc02fbcdb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -444,6 +462,50 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Inventory Select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""42776827-a3c1-4501-b644-17187dd0ac6e"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c949c18-3749-486d-a5d7-32365b5d32b4"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e55914e6-913e-4aab-bdbf-fbdb02886f1f"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InventoryToggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c9ba8902-0dd8-4693-8239-560504a77c1c"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InventoryToggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -459,6 +521,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_ControllerInputs_Attack = m_ControllerInputs.FindAction("Attack", throwIfNotFound: true);
         m_ControllerInputs_Cursor = m_ControllerInputs.FindAction("Cursor", throwIfNotFound: true);
         m_ControllerInputs_InventorySelect = m_ControllerInputs.FindAction("Inventory Select", throwIfNotFound: true);
+        m_ControllerInputs_Crouch = m_ControllerInputs.FindAction("Crouch", throwIfNotFound: true);
+        m_ControllerInputs_InventoryToggle = m_ControllerInputs.FindAction("InventoryToggle", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -532,6 +596,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_ControllerInputs_Attack;
     private readonly InputAction m_ControllerInputs_Cursor;
     private readonly InputAction m_ControllerInputs_InventorySelect;
+    private readonly InputAction m_ControllerInputs_Crouch;
+    private readonly InputAction m_ControllerInputs_InventoryToggle;
     public struct ControllerInputsActions
     {
         private @PlayerControls m_Wrapper;
@@ -543,6 +609,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Attack => m_Wrapper.m_ControllerInputs_Attack;
         public InputAction @Cursor => m_Wrapper.m_ControllerInputs_Cursor;
         public InputAction @InventorySelect => m_Wrapper.m_ControllerInputs_InventorySelect;
+        public InputAction @Crouch => m_Wrapper.m_ControllerInputs_Crouch;
+        public InputAction @InventoryToggle => m_Wrapper.m_ControllerInputs_InventoryToggle;
         public InputActionMap Get() { return m_Wrapper.m_ControllerInputs; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -573,6 +641,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @InventorySelect.started += instance.OnInventorySelect;
             @InventorySelect.performed += instance.OnInventorySelect;
             @InventorySelect.canceled += instance.OnInventorySelect;
+            @Crouch.started += instance.OnCrouch;
+            @Crouch.performed += instance.OnCrouch;
+            @Crouch.canceled += instance.OnCrouch;
+            @InventoryToggle.started += instance.OnInventoryToggle;
+            @InventoryToggle.performed += instance.OnInventoryToggle;
+            @InventoryToggle.canceled += instance.OnInventoryToggle;
         }
 
         private void UnregisterCallbacks(IControllerInputsActions instance)
@@ -598,6 +672,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @InventorySelect.started -= instance.OnInventorySelect;
             @InventorySelect.performed -= instance.OnInventorySelect;
             @InventorySelect.canceled -= instance.OnInventorySelect;
+            @Crouch.started -= instance.OnCrouch;
+            @Crouch.performed -= instance.OnCrouch;
+            @Crouch.canceled -= instance.OnCrouch;
+            @InventoryToggle.started -= instance.OnInventoryToggle;
+            @InventoryToggle.performed -= instance.OnInventoryToggle;
+            @InventoryToggle.canceled -= instance.OnInventoryToggle;
         }
 
         public void RemoveCallbacks(IControllerInputsActions instance)
@@ -624,5 +704,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnCursor(InputAction.CallbackContext context);
         void OnInventorySelect(InputAction.CallbackContext context);
+        void OnCrouch(InputAction.CallbackContext context);
+        void OnInventoryToggle(InputAction.CallbackContext context);
     }
 }

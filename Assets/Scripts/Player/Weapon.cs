@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Weapon : InventoryItem
 {
-
+	public bool Consumable;
 	protected WeaponType _WeaponType;
 	public int Damage = 1;
 	public float Range = 0.5f;

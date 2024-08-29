@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 	private PlayerControls Controls;
 
 	private bool PlayerHasJumped = false;
-	public Camera camera_;
+	public Camera _Camera;
 
 	public float MoveSpeedAmplifier;
 	private float MoveSpeedTimesFifty;
@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 	private float PlayerMaxSpeed;
 	private bool StartedRunning;
 	private bool InputRunning;
+	private bool Crouching;
 
 	public float PlayerJumpAmplifier;
 	private float PlayerJumpAmpTimesFifty;
@@ -62,6 +63,9 @@ public class PlayerMovement : MonoBehaviour
 
 		Controls = new();
 
+		Controls.ControllerInputs.Crouch.performed += context => Crouching = true;
+		Controls.ControllerInputs.Crouch.canceled += context => Crouching = false;
+
 		Controls.ControllerInputs.Horizontal.performed += context => HorizontalFloat = context.ReadValue<float>();
 		Controls.ControllerInputs.Horizontal.canceled += context => HorizontalFloat = 0f;
 
@@ -80,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		PlayerTransform = GetComponent<Transform>();
 		AnimationScript = GetComponent<PlayerAnimation>();
+		_Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 		MoveSpeedTimesFifty = MoveSpeedAmplifier * 50;
 		PlayerJumpAmpTimesFifty = PlayerJumpAmplifier * 50;
 		PlayerMaxSpeed = PlayerWalkSpeed;
@@ -88,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+		ApplyCrouch();
 
 		if (Reset)
 		{
@@ -119,18 +125,27 @@ public class PlayerMovement : MonoBehaviour
 		{
 			PlayerRigidBody.position = Checkpoint;
 			PlayerRigidBody.linearVelocity = Vector2.zero;
-			camera_.transform.position = new Vector3(PlayerRigidBody.position.x, PlayerRigidBody.position.y + 5, -10);
+			_Camera.transform.position = new Vector3(PlayerRigidBody.position.x, PlayerRigidBody.position.y + 5, -10);
 			PlayerInteractions.DamageTakenBuffer += (int) Mathf.Ceil(PlayerInteractions.PlayerMaxHealth/2);
 		}
 	}
 
-	
+	private void ApplyCrouch()
+	{
+		float yScale = PlayerTransform.localScale.y;
+		float xScale = PlayerTransform.localScale.x;
+		PlayerTransform.localScale = new Vector3(xScale, 
+												 Mathf.MoveTowards(yScale, Crouching? 0.5f: 1, 0.266f),
+												 1);
+
+	}
+
 	public void PlayerReset()
 	{
 		PlayerRigidBody.position = StartPoint;
 		PlayerRigidBody.linearVelocity = Vector2.zero;
 		PlayerInteractions.CurrentPlayerHealth = PlayerInteractions.PlayerMaxHealth;
-		camera_.transform.position = new Vector3(PlayerRigidBody.position.x, PlayerRigidBody.position.y + 5, -10);
+		_Camera.transform.position = new Vector3(PlayerRigidBody.position.x, PlayerRigidBody.position.y + 5, -10);
 	}
 
 	//Horizontal movement code
@@ -138,10 +153,11 @@ public class PlayerMovement : MonoBehaviour
 	public void MoveHorizontally(float horizontalValue)
 	{
 		float xScale = PlayerTransform.localScale.x;
+		float yScale = PlayerTransform.localScale.y;
 		PlayerTransform.localScale = new Vector3(PlayerRigidBody.linearVelocityX < 0?
-			Mathf.MoveTowards(xScale, -1, 0.066f) : 
-			Mathf.MoveTowards(xScale,  1, 0.066f),
-			1, 1);
+			Mathf.MoveTowards(xScale, -1, 0.133f) : 
+			Mathf.MoveTowards(xScale,  1, 0.133f),
+			yScale, 1);
 		AnimationScript.HorizontalVelocity = HorizontalAnimationVelocity();
 		//Allows for horizontal movement
 		if (Math.Abs(PlayerRigidBody.linearVelocity.x) <= PlayerMaxSpeed)

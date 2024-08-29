@@ -16,6 +16,7 @@ public class RangeEnemyScript : EnemyHealth
 	// Start is called before the first frame update
 	void Start()
     {
+		base.BStart();
 		PlayerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<CapsuleCollider2D>();
 		PlayerRigidBody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
@@ -23,6 +24,7 @@ public class RangeEnemyScript : EnemyHealth
     // Update is called once per frame
     void Update()
 	{
+		base.BUpdate();
 		//Determines time elapsed since last projectile
 		ProjectileTimeElapse += Time.deltaTime;
 		//Distance between the ranged enemy and player as well as the time since the last projectile has been fired
