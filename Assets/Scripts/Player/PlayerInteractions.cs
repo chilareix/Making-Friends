@@ -55,10 +55,9 @@ public class PlayerInteractions : MonoBehaviour
 		Inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<InventoryScript>();
 		Controls = new();
 
-		Controls.ControllerInputs.InventorySelect.performed += context => Inventory.SelectedItemIndex = Mathf.Clamp(Inventory.SelectedItemIndex + context.ReadValue<int>(), 0, 4);
-		Controls.ControllerInputs.InventorySelect.canceled += context => Inventory.SelectedItemIndex += 0;
+		Controls.ControllerInputs.InventorySelect.performed += context => Inventory.MoveSelectedItem(Mathf.CeilToInt(context.ReadValue<float>()));
 
-		Controls.ControllerInputs.InventoryToggle.performed += context => Inventory.ToggleInventory();
+		Controls.ControllerInputs.InventoryToggle.performed += context => Inventory.ToggleInventoryPanel();
 
 		Controls.ControllerInputs.Enable();
 		Controls.ControllerInputs.Attack.performed += context => Attacking = true;
