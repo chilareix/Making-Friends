@@ -6,3 +6,4 @@ Current Control Configuration:<br />
   QuickFall: **Keyboard** [S] **Controller** [Left Joystick Press (L3 on PS3)]<br />
   Attack: **Keyboard** [Enter] **XBox** [RB] **PlayStation** [R1]<br />
   Move Cursor: **Keyboard** [Arrow Keys] **Controller** [Right Joystick]<br />
+  Change Inventory Slot: **Keyboard** [Q/E] **Controller** [WIP]
