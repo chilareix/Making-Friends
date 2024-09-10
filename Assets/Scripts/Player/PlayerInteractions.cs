@@ -52,10 +52,9 @@ public class PlayerInteractions : MonoBehaviour
 	void Awake()
 	{
 		_Cursor = _CursorObject.GetComponent<CursorScript>();
-		Inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<InventoryScript>();
 		Controls = new();
 
-		Controls.ControllerInputs.InventorySelect.performed += context => Inventory.MoveSelectedItem(Mathf.CeilToInt(context.ReadValue<float>()));
+		Controls.ControllerInputs.InventorySelect.performed += context => Inventory.MoveItemSelector(Mathf.CeilToInt(context.ReadValue<float>()));
 
 		Controls.ControllerInputs.InventoryToggle.performed += context => Inventory.ToggleInventoryPanel();
 
@@ -64,7 +63,8 @@ public class PlayerInteractions : MonoBehaviour
 		Controls.ControllerInputs.Attack.canceled += context => Attacking = false;
 	}
 	void Start()
-    {
+	{
+		Inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<InventoryScript>();
 		AnimationScript = GetComponent<PlayerAnimation>();
 		SliderArray = Slider.FindObjectsByType<Slider>(FindObjectsSortMode.None);
 		TMPArray = TMP_Text.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None);

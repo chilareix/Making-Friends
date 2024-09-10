@@ -8,6 +8,8 @@ TagManager:
   - Floor
   - Inventory
   - Hotbar
+  - Inventory Element
+  - Inventory Foreground
   layers:
   - Default
   - TransparentFX

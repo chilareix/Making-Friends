@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 9005549396664873609}
   - component: {fileID: 2977754048220221627}
   - component: {fileID: -223355233592397274}
-  - component: {fileID: 130607388365009983}
   - component: {fileID: 2209785299909745894}
   - component: {fileID: 5954195738911460173}
   - component: {fileID: 8979699471610466687}
@@ -117,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634b25e8817936a458cb6fba7ff5d397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera_: {fileID: 398538195872845468, guid: 719f18f547be52842b66f23781aaff22, type: 3}
+  _Camera: {fileID: 0}
   MoveSpeedAmplifier: 2
   PlayerWalkSpeed: 5
   PlayerRunSpeed: 15
@@ -140,59 +139,6 @@ MonoBehaviour:
   _CursorObject: {fileID: 3302456177090378203, guid: ed8551aa58abd1c46bb035b0d46f2644, type: 3}
   _Cursor: {fileID: 5862491344713037857, guid: ed8551aa58abd1c46bb035b0d46f2644, type: 3}
   Projectile: {fileID: 5854750005031666899, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  HealthSlider: {fileID: 3711475388408197713, guid: 3d05eb463132f5f4a8c74a9e7724be82, type: 3}
-  StaminaSlider: {fileID: 6212482397228991037, guid: 910e82f847999eb4d943225607e2e564, type: 3}
-  ManaSlider: {fileID: 6360386763285157268, guid: 4bbeca683a324704faf6b4d6446a9083, type: 3}
---- !u!114 &130607388365009983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6880291927007398407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca4e317dd9b921a4cbdfbbc856b5cdbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Inventory: []
-  SpriteRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  SelectedItemGameObject: {fileID: 0}
-  SelectedItemIndex: 0
 --- !u!114 &2209785299909745894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +154,7 @@ MonoBehaviour:
   HorizontalVelocity: 0
   VerticalVelocity: 0
   Grounded: 0
+  Throwing: 0
 --- !u!95 &5954195738911460173
 Animator:
   serializedVersion: 7

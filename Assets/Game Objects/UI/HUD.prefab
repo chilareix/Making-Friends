@@ -226,47 +226,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Inventory:
   - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  - {fileID: 1037683965230258585, guid: 77570e5629121be4e8e482ea78664d8c, type: 3}
-  SelectedItemGameObject: {fileID: 0}
-  SelectedItemIndex: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  SelectedItemIndex: 35
 --- !u!1 &6332232009205850889
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,9 +771,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -898,9 +909,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -1024,9 +1047,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -1150,9 +1185,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -1276,9 +1323,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -1402,9 +1461,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -1528,9 +1599,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -1654,9 +1737,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -1780,9 +1875,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -1906,9 +2013,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -2256,9 +2375,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -2382,9 +2513,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -2508,9 +2651,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -2634,9 +2789,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -2760,9 +2927,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -2886,9 +3065,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -3012,9 +3203,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -3138,9 +3341,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -3264,9 +3479,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -3390,9 +3617,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -3516,9 +3755,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -3642,9 +3893,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -3768,9 +4031,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -3894,9 +4169,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -4020,9 +4307,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -4146,9 +4445,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -4272,9 +4583,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -4398,9 +4721,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -4642,9 +4977,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -4768,9 +5115,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -4894,9 +5253,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -5020,9 +5391,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -5146,9 +5529,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -5272,9 +5667,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -5398,9 +5805,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -5524,9 +5943,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -5650,9 +6081,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -5894,9 +6337,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -6020,9 +6475,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a
@@ -6146,9 +6613,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9044142559171907179}
     m_Modifications:
+    - target: {fileID: 1004192862062940896, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_TagString
+      value: Inventory Foreground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1676632759826005378, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918473339153649491, guid: 66b0fc5a48b2af14da8ec21a1aa0d7d0, type: 3}
       propertyPath: m_Color.a

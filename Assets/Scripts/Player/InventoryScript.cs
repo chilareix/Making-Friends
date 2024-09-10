@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,66 +10,90 @@ public class InventoryScript : MonoBehaviour
 {
 	private PlayerControls Controls;
 	public InventoryItem[] Inventory = new InventoryItem[40];
-	private Image[] InventoryImages = new Image[40];
-	private Image[] SlotBackgrounds = new Image[40];
-	private GameObject[] InventorySlots = new GameObject[40];
+	private GameObject[] InventoryBackgrounds = new GameObject[40];
+	private GameObject[] InventoryForegrounds = new GameObject[40];
 	public int SelectedItemIndex = 35;
 	private bool InventoryIsOpen = false;
 	private Image PanelImage;
 	private Color SelectedGray = new Color(0.5f, 0.5f, 0.5f, 0.75f);
+	private Sprite DefaultSprite;
 
-	public void Awake()
-	{
-	}
-	// Start is called before the first frame update
+	// Start is called before the first frame update... And in many practices, such as my own, is used to instantiate
 	void Start()
 	{
-		InventorySlots = GameObject.FindGameObjectsWithTag("Inventory Element");
-		for(int i = 0; i < InventoryImages.Length; i++)
+		DefaultSprite = Resources.Load<Sprite>("Sprites/Default");
+		InventoryBackgrounds = GameObject.FindGameObjectsWithTag("Inventory Element").Reverse().ToArray();
+		InventoryForegrounds = GameObject.FindGameObjectsWithTag("Inventory Foreground").Reverse().ToArray();
+		for (int i = 0; i < InventoryBackgrounds.Length; i++)
 		{
-			InventoryImages.Append(InventorySlots[i].GetComponentInChildren<Image>());
-			Debug.Log("Element" + i + " is " + InventoryImages[i]);
-			//InventoryImages[i].sprite = Inventory[i].GetComponent<SpriteRenderer>().sprite;
+			InventoryForegrounds[i].GetComponent<Image>().color = Color.clear;
+			if (Inventory[i] is not null)
+			{
+				InventoryForegrounds[i].GetComponent<Image>().sprite = Inventory[i].GetComponent<SpriteRenderer>().sprite;
+				continue;
+			}
+			
+			InventoryForegrounds[i].GetComponent<Image>().sprite = DefaultSprite;
+
 		}
-		InventorySlots[SelectedItemIndex].GetComponent<Image>().color = SelectedGray;
+		InventoryBackgrounds[35].GetComponent<Image>().color = SelectedGray;
 		PanelImage = GetComponent<Image>();
 		PanelImage.color = Color.clear;
+		UpdateItems();
 	}
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-	}
+	//Toggles inventory background's visibility and changes current selected slot to hotbar if closing
 	public void ToggleInventoryPanel()
 	{
 		InventoryIsOpen = !InventoryIsOpen;
+		ToggleInventorySlots();
 		if (InventoryIsOpen)
 		{
 			PanelImage.color = Color.white;
 			return;
 		}
-		InventorySlots[SelectedItemIndex].GetComponent<Image>().color = Color.clear;
-		MoveSelectedItem(35);
-		InventorySlots[SelectedItemIndex].GetComponent<Image>().color = SelectedGray;
+		InventoryBackgrounds[SelectedItemIndex].GetComponent<Image>().color = Color.clear;
+		MoveItemSelector(35);
+		InventoryBackgrounds[SelectedItemIndex].GetComponent<Image>().color = SelectedGray;
 		PanelImage.color = Color.clear;
 	}
+	//Toggles inventory slots visiblity
 	void ToggleInventorySlots()
 	{
-		foreach (Image img in InventoryImages)
+		for (int i = 0; i < 35; i++)
 		{
 			if (InventoryIsOpen)
 			{
-				img.color = Color.white;
+				InventoryForegrounds[i].GetComponent<Image>().color = Color.white;
 				continue;
 			}
-			img.color = Color.clear;
+			InventoryForegrounds[i].GetComponent<Image>().color = Color.clear;
 		}
 	}
-	public void MoveSelectedItem(int val)
+	//Moves the current item selected by increment clamping it within the inventory
+	public void MoveItemSelector(int increment)
 	{
-		InventorySlots[SelectedItemIndex].GetComponent<Image>().color = Color.clear;
-		SelectedItemIndex = Mathf.Clamp(SelectedItemIndex + val, 0, InventoryIsOpen? 39 : 4);
-		InventorySlots[SelectedItemIndex].GetComponent<Image>().color = SelectedGray;
+		InventoryBackgrounds[SelectedItemIndex].GetComponent<Image>().color = Color.clear;
+		if  (InventoryIsOpen) SelectedItemIndex = Mathf.Clamp(SelectedItemIndex + increment, 0 , 39);
+		if (!InventoryIsOpen) SelectedItemIndex = Mathf.Clamp(SelectedItemIndex + increment, 35, 39);
+		InventoryBackgrounds[SelectedItemIndex].GetComponent<Image>().color = SelectedGray;
 
+	}
+	//Updates inventory sprites by what is in the "Inventory" array
+	public void UpdateItems()
+	{
+		for (int i = 0; i < InventoryBackgrounds.Length;i++)
+		{
+			if (Inventory[i] is not null)
+			{
+				InventoryForegrounds[i].GetComponent<Image>().sprite = Inventory[i].GetComponent<SpriteRenderer>().sprite;
+				continue;
+			}
+			InventoryForegrounds[i].GetComponent<Image>().sprite = DefaultSprite;
+		}
+	}
+	//[WIP] Updates a specific inventory slot or appends an item to the inventory
+	public void UpdateItems(InventoryItem item, int index = -1)
+	{
+		InventoryForegrounds[index].GetComponent<Image>().sprite = Inventory[index].GetComponent<SpriteRenderer>().sprite;
 	}
 }
