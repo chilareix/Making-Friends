@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,13 +19,15 @@ public class InventoryScript : MonoBehaviour
 	private Image PanelImage;
 	private Color SelectedGray = new Color(0.5f, 0.5f, 0.5f, 0.75f);
 	private Sprite DefaultSprite;
+	private TMP_Text[] Counters = new TMP_Text[40];
+	private ChilareixUtilities Util = new ChilareixUtilities();
 
 	// Start is called before the first frame update... And in many practices, such as my own, is used to instantiate
 	void Start()
 	{
 		DefaultSprite = Resources.Load<Sprite>("Sprites/Default");
-		InventoryBackgrounds = GameObject.FindGameObjectsWithTag("Inventory Element").Reverse().ToArray();
-		InventoryForegrounds = GameObject.FindGameObjectsWithTag("Inventory Foreground").Reverse().ToArray();
+		InventoryBackgrounds = Util.SortGameObjectsByName(GameObject.FindGameObjectsWithTag("Inventory Element").ToArray());
+		InventoryForegrounds = Util.SortGameObjectsByName(GameObject.FindGameObjectsWithTag("Inventory Foreground").ToArray());
 		for (int i = 0; i < InventoryBackgrounds.Length; i++)
 		{
 			InventoryForegrounds[i].GetComponent<Image>().color = Color.clear;
