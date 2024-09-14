@@ -10,6 +10,8 @@ TagManager:
   - Hotbar
   - Inventory Element
   - Inventory Foreground
+  - Hotbar Background
+  - Item Counter
   layers:
   - Default
   - TransparentFX

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -32,7 +33,7 @@ public class InventoryScript : MonoBehaviour
 				InventoryForegrounds[i].GetComponent<Image>().sprite = Inventory[i].GetComponent<SpriteRenderer>().sprite;
 				continue;
 			}
-			
+
 			InventoryForegrounds[i].GetComponent<Image>().sprite = DefaultSprite;
 
 		}
