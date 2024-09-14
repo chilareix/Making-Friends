@@ -1,4 +1,4 @@
-*Controller inputs need to be tested as of the latest as of current*<br />
+*Controller inputs need to be tested as of the latest*<br />
 Current Control Configuration:<br />
   Jump: **Keyboard** [SpaceBar] **XBox** [A] **PlayStation** [X]<br />
   Horizotal Movement: **Keyboard** [A/D] **Controller** [Left Joystick X-axis]<br />
