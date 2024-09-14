@@ -7,3 +7,4 @@ Current Control Configuration:<br />
   Attack: **Keyboard** [Enter] **XBox** [RB] **PlayStation** [R1]<br />
   Move Cursor: **Keyboard** [Arrow Keys] **Controller** [Right Joystick]<br />
   Change Inventory Slot: **Keyboard** [Q/E] **Controller** [WIP]
+  Toggle Inventory: ***Keyboard** [Tab] **Controller** [WIP]
