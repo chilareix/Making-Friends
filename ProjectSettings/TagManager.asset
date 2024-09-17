@@ -12,6 +12,9 @@ TagManager:
   - Inventory Foreground
   - Hotbar Background
   - Item Counter
+  - Main Menu Label
+  - Main Menu
+  - Settings Menu
   layers:
   - Default
   - TransparentFX
