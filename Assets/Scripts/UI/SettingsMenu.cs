@@ -10,9 +10,12 @@ public class SettingsMenu : MonoBehaviour
 	public AudioMixer Mixer;
 	public TMP_Dropdown ResolutionDropdown;
 	Resolution[] Resolutions;
+	public GameObject _MainMenu;
+	public GameObject _SettingsMenu;
 
 	private void Start()
 	{
+
 		Resolutions = Screen.resolutions; //Gets a list of available resolutions
 		ResolutionDropdown.ClearOptions(); //Clears the dropdown of placeholder resolutions
 		List<string> ResolutionOptions = new List<string>(); //Creates a list object of type string to store the resolutions
@@ -48,5 +51,16 @@ public class SettingsMenu : MonoBehaviour
 	{
 		Resolution resolution = Screen.resolutions[resolutionIndex];
 		Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+	}
+	public void ToggleSettingsMenu()
+	{
+		if (_MainMenu.activeInHierarchy)
+		{
+			_MainMenu.SetActive(false);
+			_SettingsMenu.SetActive(true);
+			return;
+		}
+		_MainMenu.SetActive(true);
+		_SettingsMenu.SetActive(false);
 	}
 }

@@ -16,10 +16,20 @@ public class ChilareixUtilities
 		foreach (GameObject obj in array)
 		{
 			string objName = obj.name;
-			Debug.Log(objName);
-			int objIdx = int.Parse(objName.Substring(objName.IndexOf("(") + 1, objName.IndexOf(")") - objName.IndexOf("(") - 1));
+			int objIdx = int.Parse(BetweenSubstr(objName, objName.IndexOf("("), objName.IndexOf(")")));
 			toReturn[objIdx] = obj;
 		}
 		return toReturn;
+	}
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="str"></param>
+	/// <param name="startIdx"></param>
+	/// <param name="endIdx"></param>
+	/// <returns>A substring between specified indecies</returns>
+	string BetweenSubstr(string str, int startIdx, int endIdx)
+	{
+		return str.Substring(startIdx + 1, endIdx - startIdx - 1);
 	}
 }
