@@ -6,7 +6,6 @@ public class PauseMenu : MonoBehaviour
 	public GameObject _PauseMenu;
 	public GameObject PauseSettings;
 	public GameObject HUD;
-	private bool IsPaused = false;
 
 	/// <summary>
 	/// Closes the game
@@ -24,15 +23,13 @@ public class PauseMenu : MonoBehaviour
 	//Pauses and unpauses the game
 	public void TogglePause()
 	{
-		if (IsPaused)
+		if (!_PauseMenu.activeInHierarchy)
 		{
-			IsPaused = false;
 			Time.timeScale = 0;
 			_PauseMenu.SetActive(true);
 			HUD.SetActive(false);
 			return;
 		}
-		IsPaused = true;
 		Time.timeScale = 1.0f;
 		PauseSettings.SetActive(false);
 		_PauseMenu.SetActive(false);
