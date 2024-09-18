@@ -8,12 +8,13 @@ public class CursorScript : MonoBehaviour
 	private PlayerControls Controls;
 	public Image Cursor;
 	private Vector2 ControlBuffer;
+	public float CursorSensitivity = 2;
 
 	void Awake()
 	{
 		Controls = new();
 
-		Controls.ControllerInputs.Cursor.performed += context => ControlBuffer = context.ReadValue<Vector2>();
+		Controls.ControllerInputs.Cursor.performed += context => ControlBuffer = context.ReadValue<Vector2>() * CursorSensitivity;
 		Controls.ControllerInputs.Cursor.canceled += context => ControlBuffer = Vector2.zero;
 	}
 

@@ -10,7 +10,6 @@ using UnityEngine.UI;
 
 public class InventoryScript : MonoBehaviour
 {
-	private PlayerControls Controls;
 	public InventoryItem[] Inventory = new InventoryItem[40];
 	private GameObject[] InventoryBackgrounds = new GameObject[40];
 	private GameObject[] InventoryForegrounds = new GameObject[40];
@@ -56,7 +55,7 @@ public class InventoryScript : MonoBehaviour
 			return;
 		}
 		InventoryBackgrounds[SelectedItemIndex].GetComponent<Image>().color = Color.clear;
-		MoveItemSelector(35);
+		MoveItemSelector(0);
 		InventoryBackgrounds[SelectedItemIndex].GetComponent<Image>().color = SelectedGray;
 		PanelImage.color = Color.clear;
 	}

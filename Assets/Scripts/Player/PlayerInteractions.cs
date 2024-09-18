@@ -48,11 +48,15 @@ public class PlayerInteractions : MonoBehaviour
 	private Slider ManaSlider;
 	private PlayerAnimation AnimationScript;
 	private InventoryScript Inventory;
+	private PauseMenu _PauseMenu;
 
 	void Awake()
 	{
+		_PauseMenu = GameObject.FindGameObjectWithTag("HUD").GetComponent<PauseMenu>();
 		_Cursor = _CursorObject.GetComponent<CursorScript>();
 		Controls = new();
+
+		Controls.ControllerInputs.Escape.performed += context => _PauseMenu.TogglePause();
 
 		Controls.ControllerInputs.InventorySelect.performed += context => Inventory.MoveItemSelector(Mathf.CeilToInt(context.ReadValue<float>()));
 

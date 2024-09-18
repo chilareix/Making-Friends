@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6160597659446403195, guid: 1dfb9e6bdc1a5544f87fe26b5ea7edbf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6160597659446403195, guid: 1dfb9e6bdc1a5544f87fe26b5ea7edbf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -273,6 +273,7 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!1001 &954893250
 PrefabInstance:
   m_ObjectHideFlags: 0
