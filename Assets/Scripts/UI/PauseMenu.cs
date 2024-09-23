@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 	public GameObject _PauseMenu;
+	public GameObject _PauseMenuMain;
 	public GameObject PauseSettings;
 	public GameObject HUD;
 
@@ -23,6 +24,7 @@ public class PauseMenu : MonoBehaviour
 	//Pauses and unpauses the game
 	public void TogglePause()
 	{
+		_PauseMenuMain.SetActive(true);
 		if (!_PauseMenu.activeInHierarchy)
 		{
 			Time.timeScale = 0;

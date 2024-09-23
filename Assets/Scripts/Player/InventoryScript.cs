@@ -29,7 +29,6 @@ public class InventoryScript : MonoBehaviour
 		InventoryForegrounds = Util.SortGameObjectsByName(GameObject.FindGameObjectsWithTag("Inventory Foreground").ToArray());
 		for (int i = 0; i < InventoryBackgrounds.Length; i++)
 		{
-			InventoryForegrounds[i].GetComponent<Image>().color = Color.clear;
 			if (Inventory[i] is not null)
 			{
 				InventoryForegrounds[i].GetComponent<Image>().sprite = Inventory[i].GetComponent<SpriteRenderer>().sprite;
@@ -38,6 +37,10 @@ public class InventoryScript : MonoBehaviour
 
 			InventoryForegrounds[i].GetComponent<Image>().sprite = DefaultSprite;
 
+		}
+		for(int i = 0; i < 35; i++)
+		{
+			InventoryForegrounds[i].GetComponent<Image>().color = Color.clear;
 		}
 		InventoryBackgrounds[35].GetComponent<Image>().color = SelectedGray;
 		PanelImage = GetComponent<Image>();
@@ -98,5 +101,9 @@ public class InventoryScript : MonoBehaviour
 	public void UpdateItems(InventoryItem item, int index = -1)
 	{
 		InventoryForegrounds[index].GetComponent<Image>().sprite = Inventory[index].GetComponent<SpriteRenderer>().sprite;
+	}
+	public InventoryItem GetSelectedItem()
+	{
+		return Inventory[SelectedItemIndex];
 	}
 }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +10,9 @@ public class CursorScript : MonoBehaviour
 	private PlayerControls Controls;
 	public Image Cursor;
 	private Vector2 ControlBuffer;
-	public float CursorSensitivity = 2;
+	public float CursorSensitivity = 0.25f;
+	private Vector3 CursorPos = Vector3.zero;
+	private RectTransform CursorRectTransform;
 
 	void Awake()
 	{
@@ -16,6 +20,10 @@ public class CursorScript : MonoBehaviour
 
 		Controls.ControllerInputs.Cursor.performed += context => ControlBuffer = context.ReadValue<Vector2>() * CursorSensitivity;
 		Controls.ControllerInputs.Cursor.canceled += context => ControlBuffer = Vector2.zero;
+	}
+	void Start()
+	{
+		CursorRectTransform = GetComponent<RectTransform>();
 	}
 
     // Update is called once per frame
@@ -28,11 +36,9 @@ public class CursorScript : MonoBehaviour
 	void MoveCursor()
 	{
 		//Cursor old values
-		float cw = Cursor.transform.localScale.x;
-		float ch = Cursor.transform.localScale.y;
-		float cx = Cursor.transform.position.x;
-		float cy = Cursor.transform.position.y;
-		float cz = Cursor.transform.position.z;
+		float cx = CursorRectTransform.anchoredPosition.x;
+		float cy = CursorRectTransform.anchoredPosition.y;
+		float cz = 0;
 		
 		//Buffer values
 		float bx = ControlBuffer.x;
@@ -43,15 +49,13 @@ public class CursorScript : MonoBehaviour
 		float rh = Screen.height;
 
 		//Cursor new values
-		float cx1 = Mathf.Clamp( cx + bx, 0 + cw * 2, rw - cw * 2 );
-		float cy1 = Mathf.Clamp( cy + by, 0 + ch * 2, rh - ch * 2 );
+		float cx1 = Mathf.Clamp( cx + bx, -rw/2, rw/2 );
+		float cy1 = Mathf.Clamp( cy + by, -rh/2, rh/2 );
 
-		Cursor.transform.position = new Vector3(cx1, cy1, cz);
+		CursorPos = new Vector3(cx1, cy1, cz);
 
-	}
-	public Vector2 GetCursorLocationToWorld()
-	{
-		return Cursor.transform.localToWorldMatrix.GetPosition();
+		CursorRectTransform.anchoredPosition = CursorPos;
+		
 	}
 	public void OnEnable()
 	{

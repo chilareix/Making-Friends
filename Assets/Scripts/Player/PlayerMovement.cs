@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private bool IsStaminaRegenning;
 
+	private PlayerInteractions _PlayerInteractions;
 	private Rigidbody2D PlayerRigidBody;
 	private CapsuleCollider2D PlayerCollider;
 
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Awake()
 	{
-		
+		_PlayerInteractions = GetComponent<PlayerInteractions>();
 		QFall = 0;
 		IsStaminaRegenning = false;
 
@@ -126,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
 			PlayerRigidBody.position = Checkpoint;
 			PlayerRigidBody.linearVelocity = Vector2.zero;
 			_Camera.transform.position = new Vector3(PlayerRigidBody.position.x, PlayerRigidBody.position.y + 5, -10);
-			PlayerInteractions.DamageTakenBuffer += (int) Mathf.Ceil(PlayerInteractions.PlayerMaxHealth/2);
+			_PlayerInteractions.DamageTakenBuffer += (int) Mathf.Ceil(_PlayerInteractions.PlayerMaxHealth/2);
 		}
 	}
 
@@ -144,7 +145,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		PlayerRigidBody.position = StartPoint;
 		PlayerRigidBody.linearVelocity = Vector2.zero;
-		PlayerInteractions.CurrentPlayerHealth = PlayerInteractions.PlayerMaxHealth;
+		_PlayerInteractions.CurrentPlayerHealth = _PlayerInteractions.PlayerMaxHealth;
 		_Camera.transform.position = new Vector3(PlayerRigidBody.position.x, PlayerRigidBody.position.y + 5, -10);
 	}
 
@@ -154,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		float xScale = PlayerTransform.localScale.x;
 		float yScale = PlayerTransform.localScale.y;
-		PlayerTransform.localScale = new Vector3(PlayerRigidBody.linearVelocityX < 0?
+		PlayerTransform.localScale = new Vector3(PlayerRigidBody.linearVelocityX < -0.1f?
 			Mathf.MoveTowards(xScale, -1, 0.133f) : 
 			Mathf.MoveTowards(xScale,  1, 0.133f),
 			yScale, 1);
@@ -177,11 +178,11 @@ public class PlayerMovement : MonoBehaviour
 	//Coroutine for draining stamina
 	IEnumerator DrainStaminaCoroutine()
 	{
-		while(StartedRunning && PlayerInteractions.CurrentPlayerStamina > 0)
+		while(StartedRunning && _PlayerInteractions.CurrentPlayerStamina > 0)
 		{
 			yield return new WaitForSeconds(0.5f);
-			PlayerInteractions.CurrentPlayerStamina--;
-			PlayerInteractions.StaminaSpent++;
+			_PlayerInteractions.CurrentPlayerStamina--;
+			_PlayerInteractions.StaminaSpent++;
 		}
 		//Sets speed back to walk speed
 		PlayerMaxSpeed = PlayerWalkSpeed;
@@ -189,7 +190,7 @@ public class PlayerMovement : MonoBehaviour
 			//Starts stamina drain coroutine and sets speed to run speed
 	public void PlayerSprint()
 	{
-		if (PlayerInteractions.CurrentPlayerStamina > 0)
+		if (_PlayerInteractions.CurrentPlayerStamina > 0)
 		{
 			PlayerMaxSpeed = PlayerRunSpeed;
 			if (!StartedRunning)
@@ -204,12 +205,12 @@ public class PlayerMovement : MonoBehaviour
 	IEnumerator RegenStaminaCoroutine()
 	{
 		IsStaminaRegenning = true;
-		while(!StartedRunning && PlayerInteractions.CurrentPlayerStamina < PlayerInteractions.PlayerMaxStamina)
+		while(!StartedRunning && _PlayerInteractions.CurrentPlayerStamina < _PlayerInteractions.PlayerMaxStamina)
 		{
 			yield return new WaitForSeconds(0.5f);
-			PlayerInteractions.CurrentPlayerStamina++;
-			PlayerInteractions.StaminaRegenned++;
-			PlayerInteractions.StaminaRegennedNat++;
+			_PlayerInteractions.CurrentPlayerStamina++;
+			_PlayerInteractions.StaminaRegenned++;
+			_PlayerInteractions.StaminaRegennedNat++;
 		}
 		IsStaminaRegenning = false;
 	}

@@ -16,28 +16,29 @@ public class PlayerInteractions : MonoBehaviour
 	public CursorScript _Cursor;
 
 	public GameObject Projectile;
+	private bool AttackEnable = true;
 	private bool Attacking = false;
 
-	public static int StaminaSpent = 0;
-	public static int StaminaRegenned = 0;
-	public static int StaminaRegennedNat = 0;
+	public int StaminaSpent = 0;
+	public int StaminaRegenned = 0;
+	public int StaminaRegennedNat = 0;
 
-	public static int DamageTaken = 0;
-	public static int HealthRegenned = 0;
-	public static int HealthRegennedNat = 0;
+	private int DamageTaken = 0;
+	private int HealthRegenned = 0;
+	private int HealthRegennedNat = 0;
 
-	public static int ManaSpent = 0;
-	public static int ManaRegenned = 0;
-	public static int ManaRegennedNat = 0;
+	private int ManaSpent = 0;
+	private int ManaRegenned = 0;
+	private int ManaRegennedNat = 0;
 
-	public static int PlayerMaxHealth = 10;
-	public static int CurrentPlayerHealth = 10;
-	public static int DamageTakenBuffer = 0;
-	public static int Armor;
-	public static int PlayerMaxStamina = 10;
-	public static int CurrentPlayerStamina = 10;
-	public static int PlayerMaxMana = 10;
-	public static int CurrentPlayerMana = 10;
+	public int PlayerMaxHealth = 10;
+	public int CurrentPlayerHealth = 10;
+	public int DamageTakenBuffer = 0;
+	public int Armor;
+	public int PlayerMaxStamina = 10;
+	public int CurrentPlayerStamina = 10;
+	public int PlayerMaxMana = 10;
+	public int CurrentPlayerMana = 10;
 	private TMP_Text[] TMPArray;
 	private Slider[] SliderArray;
 	private TMP_Text HealthText;
@@ -52,8 +53,6 @@ public class PlayerInteractions : MonoBehaviour
 
 	void Awake()
 	{
-		_PauseMenu = GameObject.FindGameObjectWithTag("HUD").GetComponent<PauseMenu>();
-		_Cursor = _CursorObject.GetComponent<CursorScript>();
 		Controls = new();
 
 		Controls.ControllerInputs.Escape.performed += context => _PauseMenu.TogglePause();
@@ -62,12 +61,13 @@ public class PlayerInteractions : MonoBehaviour
 
 		Controls.ControllerInputs.InventoryToggle.performed += context => Inventory.ToggleInventoryPanel();
 
-		Controls.ControllerInputs.Enable();
 		Controls.ControllerInputs.Attack.performed += context => Attacking = true;
 		Controls.ControllerInputs.Attack.canceled += context => Attacking = false;
 	}
 	void Start()
 	{
+		_PauseMenu = GameObject.FindGameObjectWithTag("HUD").GetComponent<PauseMenu>();
+		_Cursor = _CursorObject.GetComponent<CursorScript>();
 		Inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<InventoryScript>();
 		AnimationScript = GetComponent<PlayerAnimation>();
 		SliderArray = Slider.FindObjectsByType<Slider>(FindObjectsSortMode.None);
@@ -98,7 +98,7 @@ public class PlayerInteractions : MonoBehaviour
 		//Resets player on death
 		if (CurrentPlayerHealth <= 0) PlayerMovement.Reset = true;
 
-		if (Attacking) StartCoroutine(AttackDelayCoroutine());
+		if (Attacking && AttackEnable) StartCoroutine(AttackDelayCoroutine());
 	}
 	public void TakeDamage()
 	{
@@ -124,20 +124,28 @@ public class PlayerInteractions : MonoBehaviour
 
 	IEnumerator AttackDelayCoroutine()
 	{
+		AttackEnable = false;
 		while (Attacking)
 		{
 			yield return new WaitForSeconds(0.13f);
-			//Attack(_Weapon);
-			AnimationScript.Throwing = true;
+			if (Inventory.GetSelectedItem().IsWeapon) {
+				Attack((Weapon) Inventory.GetSelectedItem());
+				AnimationScript.Throwing = true;
+			}
 		}
 		AnimationScript.Throwing = false;
+		AttackEnable = true;
 	}
 
 	void Attack(Weapon weapon)
 	{
+		RectTransform canvas = GameObject.FindGameObjectWithTag("HUD").GetComponent<RectTransform>();
 		Vector2 playerPos = PlayerRigidBody.position;
-		Vector2 cursorPos = _Cursor.GetCursorLocationToWorld();
-		weapon.Fire(playerPos, Mathf.Atan( (cursorPos.y - playerPos.y) / (cursorPos.x - playerPos.x) ));
+		Vector3 canvasCursorPos = _Cursor.GetComponent<RectTransform>().localPosition;
+		Vector2 screenPos = RectTransformUtility.WorldToScreenPoint(Camera.main, canvas.TransformPoint(canvasCursorPos));
+		Vector3 cursorWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, 10));
+		
+		weapon.Fire(playerPos, ((Vector2)cursorWorldPos - playerPos));
 	}
 
 	public void OnEnable()

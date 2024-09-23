@@ -9,6 +9,7 @@ public class HostileProjectile : MonoBehaviour
 	private Rigidbody2D PlayerRigidBody;
 	public Rigidbody2D ProjectileRigidBody;
 	private CapsuleCollider2D PlayerCollider;
+	private PlayerInteractions _PlayerInteractions;
 	public GameObject HostileProjectileObject;
 	private float LifeTime;
 	public float ProjectileSpeed;
@@ -17,14 +18,10 @@ public class HostileProjectile : MonoBehaviour
 
     void Start()
     {
-		//Assigns attributes for
-			//player GameObject
 		PlayerObject = GameObject.FindGameObjectWithTag("Player");
-			//Player Rigid Body
 		PlayerRigidBody = PlayerObject.GetComponent<Rigidbody2D>();
-			//Player collision box
 		PlayerCollider = PlayerObject.GetComponent<CapsuleCollider2D>();
-			//Projectile direction (multiplied by the speed for easy use in vector)
+		_PlayerInteractions = PlayerObject.GetComponent<PlayerInteractions>();
 		ProjectileRigidBody.linearVelocity = new Vector2(
 			(PlayerRigidBody.transform.position.x - transform.position.x) * ProjectileSpeed,
 			(PlayerRigidBody.transform.position.y - transform.position.y) * ProjectileSpeed);
@@ -38,7 +35,7 @@ public class HostileProjectile : MonoBehaviour
 		if (GetComponent<CircleCollider2D>().IsTouching(PlayerCollider))
 		{
 			//Player takes damage
-			PlayerInteractions.DamageTakenBuffer += ProjectileDamage;
+			_PlayerInteractions.DamageTakenBuffer += ProjectileDamage;
 			//Projectile GameObject destroyed
 			Destroy(HostileProjectileObject);
 		}

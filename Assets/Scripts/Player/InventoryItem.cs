@@ -5,19 +5,17 @@ using UnityEngine.UI;
 
 public class InventoryItem : MonoBehaviour
 {
-	public RectTransform _Transform;
-	public Image _Image;
+	public Transform _Transform;
 	public int Quantity;
 	public int MaxQuantity;
 	public SpriteRenderer _SpriteRenderer;
-
+	public bool IsWeapon = false;
 
 	public void Start()
 	{
-		_Image = GetComponent<Image>();
+		_Transform = GetComponent<Transform>();
 		_SpriteRenderer = GetComponent<SpriteRenderer>();
-		if (_Image == null || _SpriteRenderer == null) Debug.Log(_Image + " " + _SpriteRenderer);
-		_SpriteRenderer.sprite = _Image.sprite;
+		if (_SpriteRenderer == null) Debug.Log(_SpriteRenderer.name);
 	}
 
 }

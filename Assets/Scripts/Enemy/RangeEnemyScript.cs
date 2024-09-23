@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangeEnemyScript : EnemyHealth
+public class RangeEnemyScript : Enemy
 {
 	public GameObject Projectile;
-	public BoxCollider2D EnemyCollider;
-	public CapsuleCollider2D PlayerCollider;
 	public Rigidbody2D PlayerRigidBody;
-	public Rigidbody2D RangeEnemyRigidBody;
-	public GameObject RangeEnemyGameObject;
 	private float ProjectileTimeElapse = 0;
 	public float ProjectileLifeTime = 2;
 
@@ -28,16 +24,16 @@ public class RangeEnemyScript : EnemyHealth
 		//Determines time elapsed since last projectile
 		ProjectileTimeElapse += Time.deltaTime;
 		//Distance between the ranged enemy and player as well as the time since the last projectile has been fired
-		if (RangeEnemyRigidBody.Distance(PlayerCollider).distance < 10 && ProjectileTimeElapse > ProjectileLifeTime)
+		if (EnemyRigidBody.Distance(PlayerCollider).distance < 10 && ProjectileTimeElapse > ProjectileLifeTime)
 		{
 			Instantiate(Projectile, ProjectilePosition(), transform.rotation, transform);
 			ProjectileTimeElapse = 0;
 		}
 		//Deletes enemy game object if a condition is met
 			//Falls off map
-		if (RangeEnemyRigidBody.position.y < -100) GameObject.Destroy(RangeEnemyGameObject);
+		if (EnemyRigidBody.position.y < -100) GameObject.Destroy(EnemyGameObject);
 			//Runs out of health
-		if (CurrentHealth <= 0) GameObject.Destroy(RangeEnemyGameObject);
+		if (CurrentHealth <= 0) GameObject.Destroy(EnemyGameObject);
 	}
 	Vector3 ProjectilePosition()
 	{
